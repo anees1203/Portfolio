@@ -20,7 +20,7 @@ function HomeSection() {
   return (
     <div className="home-section">
         <div className="interactive-sphere-container">
-            <InteractiveSphere color="#00fffc" />
+            <InteractiveSphere color="#00fffc" numberOfNodes={5000} />
         </div>
         <div className="text-wrapper">
             <pre>{text}</pre>
