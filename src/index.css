@@ -83,20 +83,67 @@ nav .list-styled li a:hover {
 
 
 /* HomeSection.css */
+
+/* HomeSection.css */
 .home-section {
-  color: #00b4d8; /* Light blue text */
-  background-color: #000000; /* Black background */
+  position: relative; /* Establish relative positioning for child absolute elements */
+  color: #00b4d8;
+  background-color: #000000;
   font-size: 1.5em;
   font-family: 'Courier New', Courier, monospace;
-  white-space: pre-wrap; /* Respects newline characters in the text */
-  text-align: center;
-  padding-top: 50px; /* Adjust as needed for vertical centering */
-  min-height: 100vh; /* Full height */
+  white-space: pre-wrap;
+  text-align: left;
+  padding-top: 40px;
+  min-height: 100vh;
   display: flex;
   flex-direction: column;
   justify-content: center;
-  align-items: center;
+  align-items: flex-start; /* Align items to the start of the container */
 }
+
+.profile-image {
+  position: absolute; /* Absolute positioning */
+  top: 70%; /* Align vertically */
+  right: 50px; /* Distance from the right */
+  transform: translateY(-50%); /* Center vertically relative to the container */
+  max-width: 200px; /* Adjust width as needed */
+  max-height: 2000px; /* Adjust height as needed */
+  border-radius: 50%;
+}
+
+/* HomeSection.css */
+.text-wrapper {
+  position: absolute;
+  top: 20%;
+  left: 50px;
+  max-width: 600px; /* Maximum width for the text block */
+  padding-left: 50px; /* Ensures text doesn't overlap the image */
+  font-family: 'Arial', sans-serif; /* Change the font family as needed */
+}
+
+.text-wrapper pre {
+  margin: 0; /* Removes default margin */
+  font-size: 35px; /* Adjust the font size as needed */
+  color: #FFFFFF; /* Adjust text color if needed */
+  line-height: 1.5; /* Adjust line height for better readability */
+}
+
+.interactive-sphere-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  width: 100%; /* Adjust as needed */
+}
+
+.three-canvas {
+  max-width: 50%; /* Adjust as needed for scaling */
+  max-height: 100%; /* Adjust as needed for scaling */
+  margin-top: 20px;
+}
+
+
+
 
 .skills-section {
   min-height: 100vh; /* Ensures the section takes at least the height of the viewport */

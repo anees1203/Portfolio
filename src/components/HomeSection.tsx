@@ -1,5 +1,7 @@
 // HomeSection.js
 import React, { useEffect, useState } from 'react';
+import profileImage from '../assets/Images/profileImage.png';
+import InteractiveSphere from './InteractiveSphere';
 
 function HomeSection() {
   const fullText = "Hi There! \n👋🏼 \nI’m\nAnees Shaik\nSoftware Engineer";
@@ -17,9 +19,16 @@ function HomeSection() {
 
   return (
     <div className="home-section">
-      <pre>{text}</pre>
+        <div className="interactive-sphere-container">
+            <InteractiveSphere color="#00fffc" />
+        </div>
+        <div className="text-wrapper">
+            <pre>{text}</pre>
+        </div>
+        <img src={profileImage} alt="Anees Shaik" className="profile-image" />
     </div>
   );
 }
 
 export default HomeSection;
+
