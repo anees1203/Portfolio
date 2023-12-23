@@ -9,6 +9,7 @@ html, body {
 
 /* This styles your navigation wrapper */
 nav.nav-wrapper {
+  position: relative;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -17,6 +18,22 @@ nav.nav-wrapper {
   height: 70px;
   font-size: 20px;
   background-color: #000000;
+}
+
+.nav-wrapper:before {
+  content: '';
+  position: absolute;
+  top: -150px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 160px; /* Width of the light effect */
+  height: 160px; /* Height of the light effect */
+  background: radial-gradient(circle, rgba(0, 0, 0, 0.6) 0%, rgba(0, 0, 0, 0.2) 70%, transparent 100%);
+  border-radius: 50%;
+  filter: blur(10px);
+  box-shadow: 0 0 90px 40px #00fffc; /* Adjust the size and color of the glow effect */
+  z-index: 1; /* Ensure it's above the nav content */
+  pointer-events: none;
 }
 
 /* This styles the content within the nav, centers it horizontally */
