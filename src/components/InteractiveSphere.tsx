@@ -1,7 +1,7 @@
 import React, { useRef, useEffect } from 'react';
 import * as THREE from 'three';
 
-const InteractiveNetworkSphere = ({ color = '#00fffc', numberOfNodes = 100 }) => {
+const InteractiveSphere = ({ color = '#00fffc', numberOfNodes = 100 }) => {
   const mountRef = useRef(null);
 
   useEffect(() => {
@@ -63,9 +63,9 @@ const InteractiveNetworkSphere = ({ color = '#00fffc', numberOfNodes = 100 }) =>
       renderer.domElement.removeEventListener('mousemove', handleMouseMove);
       mountRef.current.removeChild(renderer.domElement);
     };
-  }, [color, numberOfNodes]); // Add numberOfNodes to the dependency array
+  }, [color, numberOfNodes]);
 
   return <div ref={mountRef} style={{ width: '100%', height: '100vh' }} />;
 };
 
-export default InteractiveNetworkSphere;
+export default InteractiveSphere;

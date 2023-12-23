@@ -140,7 +140,6 @@ nav .list-styled li a:hover {
   margin: 0; /* Removes default margin */
   font-size: 35px; /* Adjust the font size as needed */
   color: #FFFFFF; /* Adjust text color if needed */
-  line-height: 1.5; /* Adjust line height for better readability */
 }
 
 .interactive-sphere-container {
@@ -157,6 +156,32 @@ nav .list-styled li a:hover {
   margin-top: 20px;
 }
 
+.name-text {
+  font-size: 48px; /* Adjust to match the size in your design */
+  font-weight: bold;
+  line-height: 1.3;
+  color: #5E17EB; /* Example purple color, adjust as needed */
+}
+
+.special-text {
+  font-family: 'Arial', sans-serif; /* Example: Change as needed */
+  font-size: 20px; /* Example: Change as needed */
+  color: #00fffc; /* Example: Change as needed */
+  line-height: 0.1;
+  /* Add any other specific styling you want for the special text */
+}
+
+.blinking-cursor {
+  font-weight: 100;
+  font-size: 24px; /* Adjust the cursor size if needed */
+  color: white;
+  animation: blinkingCursor 0.8s step-end infinite;
+}
+
+@keyframes blinkingCursor {
+  from { opacity: 1; }
+  to { opacity: 0; }
+}
 
 
 
