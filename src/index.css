@@ -73,9 +73,40 @@ nav .nav-content .underline {
   left: 0;
   width: 0; /* Controlled by JavaScript */
   transition: left 0.3s, width 0.3s; /* Smooth transition for movement and width change */
+  display: none;
 }
 
 /* Change font color on hover */
 nav .list-styled li a:hover {
   color: #00fffc;
+}
+
+
+/* HomeSection.css */
+.home-section {
+  color: #00b4d8; /* Light blue text */
+  background-color: #000000; /* Black background */
+  font-size: 1.5em;
+  font-family: 'Courier New', Courier, monospace;
+  white-space: pre-wrap; /* Respects newline characters in the text */
+  text-align: center;
+  padding-top: 50px; /* Adjust as needed for vertical centering */
+  min-height: 100vh; /* Full height */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.skills-section {
+  min-height: 100vh; /* Ensures the section takes at least the height of the viewport */
+  background-color: #f0f0f0; /* Light grey background, adjust color as needed */
+  color: #333; /* Dark text color for contrast */
+  padding: 50px 20px; /* Adds some padding around the content */
+  display: flex; /* Enables flexbox layout */
+  flex-direction: column; /* Stacks child elements vertically */
+  justify-content: center; /* Centers children vertically */
+  align-items: center; /* Centers children horizontally */
+  text-align: center; /* Centers text */
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; /* Sets a sans-serif font */
 }
