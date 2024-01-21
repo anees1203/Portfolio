@@ -197,3 +197,16 @@ nav .list-styled li a:hover {
   text-align: center; /* Centers text */
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; /* Sets a sans-serif font */
 }
+
+.work-section {
+  min-height: 100vh; /* Ensures the section takes at least the height of the viewport */
+  background-color: #ffffff; /* Light grey background, adjust color as needed */
+  color: #333; /* Dark text color for contrast */
+  padding: 50px 20px; /* Adds some padding around the content */
+  display: flex; /* Enables flexbox layout */
+  flex-direction: column; /* Stacks child elements vertically */
+  justify-content: center; /* Centers children vertically */
+  align-items: center; /* Centers children horizontally */
+  text-align: center; /* Centers text */
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; /* Sets a sans-serif font */
+}
