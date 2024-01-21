@@ -9,8 +9,8 @@ function App() {
     <div className='Application'>
       <Nav/>
       <HomeSection/>
-      <WorkSection/>
       <SkillSection/>
+      <WorkSection/>
     </div>
   );
 }
