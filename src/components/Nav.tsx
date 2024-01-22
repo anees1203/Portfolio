@@ -11,7 +11,7 @@ function Nav() {
     const [underlineStyle, setUnderlineStyle] = useState<UnderlineStyle>({ display: 'none' });
 
     useEffect(() => {
-        const handleMouseEnter = (event: React.MouseEvent) => {
+        const handleMouseEnter = (event: MouseEvent) => {
             const target = event.target as HTMLElement;
             if (target.tagName === 'A') {
                 const { offsetLeft, clientWidth } = target;
@@ -29,14 +29,15 @@ function Nav() {
 
         const nav = navRef.current;
         if (nav) {
-            nav.querySelectorAll('li a').forEach(link => {
-                link.addEventListener('mouseenter', handleMouseEnter);
+            const links = nav.querySelectorAll('li a');
+            links.forEach(link => {
+                link.addEventListener('mouseenter', handleMouseEnter as EventListener);
             });
             nav.addEventListener('mouseleave', handleMouseLeave);
 
             return () => {
-                nav.querySelectorAll('li a').forEach(link => {
-                    link.removeEventListener('mouseenter', handleMouseEnter);
+                links.forEach(link => {
+                    link.removeEventListener('mouseenter', handleMouseEnter as EventListener);
                 });
                 nav.removeEventListener('mouseleave', handleMouseLeave);
             };
