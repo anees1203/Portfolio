@@ -2,18 +2,19 @@ import { useRef, useEffect } from 'react';
 import * as THREE from 'three';
 
 const InteractiveSphere = ({ color = '#00fffc', numberOfNodes = 100 }) => {
-  const mountRef = useRef(null);
+  const mountRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
-    if (!mountRef.current) return;
+    const mount = mountRef.current;
+    if (!mount) return;
 
-    const width = mountRef.current.clientWidth;
-    const height = mountRef.current.clientHeight;
+    const width = mount.clientWidth;
+    const height = mount.clientHeight;
     const scene = new THREE.Scene();
     const camera = new THREE.PerspectiveCamera(75, width / height, 0.1, 1000);
     const renderer = new THREE.WebGLRenderer({ alpha: true });
     renderer.setSize(width, height);
-    mountRef.current.appendChild(renderer.domElement);
+    mount.appendChild(renderer.domElement);
 
     // Generate nodes on the sphere's surface
     const nodePositions = Array.from({ length: numberOfNodes }, () => {
@@ -57,11 +58,11 @@ const InteractiveSphere = ({ color = '#00fffc', numberOfNodes = 100 }) => {
       nodes.rotation.y = yRotation;
     };
 
-    renderer.domElement.addEventListener('mousemove', handleMouseMove);
-
     return () => {
+      if (mount) {
+        mount.removeChild(renderer.domElement);
+      }
       renderer.domElement.removeEventListener('mousemove', handleMouseMove);
-      mountRef.current.removeChild(renderer.domElement);
     };
   }, [color, numberOfNodes]);
 
