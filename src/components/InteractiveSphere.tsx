@@ -48,7 +48,7 @@ const InteractiveSphere = ({ color = '#00fffc', numberOfNodes = 100 }) => {
     animate();
 
     // Handle mouse movement
-    const handleMouseMove = (event) => {
+    const handleMouseMove = (event: MouseEvent) => {
       const rect = renderer.domElement.getBoundingClientRect();
       const x = event.clientX - rect.left;
       const y = event.clientY - rect.top;
