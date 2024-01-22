@@ -1,4 +1,3 @@
-import React from "react";
 import profileImage from "../assets/Images/profileImage.png";
 import InteractiveSphere from "./InteractiveSphere";
 import my from "../assets/Images/my.jpg";

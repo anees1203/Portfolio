@@ -1,4 +1,3 @@
-import React from 'react';
 import python from "../assets/Images/python.png";
 import java from "../assets/Images/java.png";
 import react from "../assets/Images/react.png";

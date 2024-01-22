@@ -1,4 +1,3 @@
-import React from 'react';
 import YourImage from "../assets/Images/project1.png";
 
 function WorkSection() {

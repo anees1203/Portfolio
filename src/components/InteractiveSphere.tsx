@@ -1,4 +1,4 @@
-import React, { useRef, useEffect } from 'react';
+import { useRef, useEffect } from 'react';
 import * as THREE from 'three';
 
 const InteractiveSphere = ({ color = '#00fffc', numberOfNodes = 100 }) => {
