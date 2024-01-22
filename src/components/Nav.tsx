@@ -1,18 +1,25 @@
-import { useState, useEffect, useRef } from 'react';
+import React, { useState, useEffect, useRef } from 'react';
+
+interface UnderlineStyle {
+    display: string;
+    left?: number;
+    width?: number;
+}
 
 function Nav() {
-    const navRef = useRef();
-    const [underlineStyle, setUnderlineStyle] = useState({ display: 'none' });
+    const navRef = useRef<HTMLDivElement>(null);
+    const [underlineStyle, setUnderlineStyle] = useState<UnderlineStyle>({ display: 'none' });
 
     useEffect(() => {
-        const handleMouseEnter = (event) => {
-            if (event.target.tagName === 'A') {
-              const { offsetLeft, clientWidth } = event.target;
-              setUnderlineStyle({ 
-                left: offsetLeft, 
-                width: clientWidth,
-                display: 'block'
-              });
+        const handleMouseEnter = (event: React.MouseEvent) => {
+            const target = event.target as HTMLElement;
+            if (target.tagName === 'A') {
+                const { offsetLeft, clientWidth } = target;
+                setUnderlineStyle({ 
+                    left: offsetLeft, 
+                    width: clientWidth,
+                    display: 'block'
+                });
             }
         };
 
@@ -21,20 +28,22 @@ function Nav() {
         };
 
         const nav = navRef.current;
-        nav.querySelectorAll('li a').forEach(link => {
-            link.addEventListener('mouseenter', handleMouseEnter);
-        });
-        nav.addEventListener('mouseleave', handleMouseLeave);
-
-        return () => {
+        if (nav) {
             nav.querySelectorAll('li a').forEach(link => {
-                link.removeEventListener('mouseenter', handleMouseEnter);
+                link.addEventListener('mouseenter', handleMouseEnter);
             });
-            nav.removeEventListener('mouseleave', handleMouseLeave);
-        };
+            nav.addEventListener('mouseleave', handleMouseLeave);
+
+            return () => {
+                nav.querySelectorAll('li a').forEach(link => {
+                    link.removeEventListener('mouseenter', handleMouseEnter);
+                });
+                nav.removeEventListener('mouseleave', handleMouseLeave);
+            };
+        }
     }, []);
 
-    const scrollToSection = (sectionClass) => {
+    const scrollToSection = (sectionClass: string) => {
         const section = document.querySelector(`.${sectionClass}`);
         if (section) {
             section.scrollIntoView({ behavior: 'smooth', block: 'start' });
@@ -50,7 +59,7 @@ function Nav() {
                     <li><a className="work" onClick={() => scrollToSection('work-section')}>Work</a></li>
                     <li><a className="contact" onClick={() => scrollToSection('contact-section')}>Contact</a></li>
                 </ul>
-                <div className="underline" style={{ ...underlineStyle }} />
+                <div className="underline" style={underlineStyle} />
             </div>
         </nav>  
     );
