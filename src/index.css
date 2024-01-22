@@ -246,17 +246,77 @@ nav .list-styled li a:hover {
 /* ================================================ */
 .skills-section {
   min-height: 100vh; /* Ensures the section takes at least the height of the viewport */
-  background-color: #f0f0f0; /* Light grey background, adjust color as needed */
+  background-color: #000000; /* Light grey background */
   color: #333; /* Dark text color for contrast */
-  padding: 50px 20px; /* Adds some padding around the content */
   display: flex; /* Enables flexbox layout */
   flex-direction: column; /* Stacks child elements vertically */
-  justify-content: center; /* Centers children vertically */
-  align-items: center; /* Centers children horizontally */
-  text-align: center; /* Centers text */
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; /* Sets a sans-serif font */
+  justify-content: flex-start; /* Aligns children to the start of the main axis */
+  align-items: center; /* Centers children on the cross axis */
+  padding: 20px; /* Adds some padding around the content */
+  text-align: center; /* Centers the text for all children, including the heading */
 }
 
+.skills-heading {
+  color: #e0dbdb;
+  font-size: 2.8rem;
+  font-family: 'Consolas', 'Courier New', monospace;
+  animation: textFadeIn 4s ease-out; /* 4 seconds animation */
+  width: 100%; /* Ensures the heading is full width */
+}
+
+/* Parent container for Icons Section and Image Container */
+.content-container {
+
+  display: flex;
+  flex-direction: row; /* Arrange children side by side */
+  justify-content: center; /* Center the children horizontally */
+  align-items: flex-start; /* Align children to the top of the container */
+  margin-top: 4rem; /* Adds space between the heading and the content */
+}
+
+.icons-section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.icons-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr); /* Creates a 5x5 grid with 5 columns */
+  grid-template-rows: repeat(4, 1fr);
+  grid-gap: 40px;
+}
+
+.icon img {
+  width: 80px; /* Set the desired icon width */
+  height: 80px; /* Set the desired icon height */
+  max-width: 100%; /* Ensures the icon fits within the grid cell */
+}
+
+.icon p {
+  text-align: center; /* Centers the text below the icon */
+  margin-top: 8px; /* Adds space between the icon and the label */
+  color: #e0dbdb;
+}
+
+.image-container {
+  max-width: 40%; /* Adjust the size as needed */
+}
+
+.developer-tagline {
+  color: #e0dbdb; /* Replace #HEXCOLOR with the hex code of the color you want */
+  padding-top: 8%;
+  padding-right: 50%;
+  font-size: 1.1rem;
+  /* Add other styles as needed, such as font-size, font-weight, etc. */
+}
+
+
+.image-container img {
+  padding-right: 95%;
+  width: 50%; /* Ensures the image is responsive and fills the container */
+  height: auto; /* Maintains the aspect ratio of the image */
+}
 
 /* ================================================ */
 /* work section */
