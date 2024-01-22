@@ -283,7 +283,7 @@ nav .list-styled li a:hover {
 .icons-grid {
   display: grid;
   grid-template-columns: repeat(4, 1fr); /* Creates a 5x5 grid with 5 columns */
-  grid-template-rows: repeat(4, 1fr);
+  grid-template-rows: repeat(3, 1fr);
   grid-gap: 40px;
 }
 
@@ -323,17 +323,76 @@ nav .list-styled li a:hover {
 /* ================================================ */
 .work-section {
   min-height: 100vh; /* Ensures the section takes at least the height of the viewport */
-  background-color: #ffffff; /* Light grey background, adjust color as needed */
+  background-color: #fbfbfb; /* Light grey background */
   color: #333; /* Dark text color for contrast */
-  padding: 50px 20px; /* Adds some padding around the content */
   display: flex; /* Enables flexbox layout */
   flex-direction: column; /* Stacks child elements vertically */
-  justify-content: center; /* Centers children vertically */
-  align-items: center; /* Centers children horizontally */
-  text-align: center; /* Centers text */
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; /* Sets a sans-serif font */
+  justify-content: flex-start; /* Aligns children to the start of the main axis */
+  align-items: center; /* Centers children on the cross axis */
+  padding: 20px; /* Adds some padding around the content */
+  text-align: center; /* Centers the text for all children, including the heading */
 }
 
+.work-heading{
+  color: #000000;
+  font-size: 2.8rem;
+  font-family: 'Consolas', 'Courier New', monospace;
+  width: 100%; /* Ensures the heading is full width */
+  font-weight: bold;
+  margin-bottom: 0.5rem;
+}
+
+.tagline{
+  font-size: 1.4rem;
+  color: #515151;
+  padding-bottom: 5%;
+
+}
+
+
+.image1-container {
+  max-width: 500px; /* Adjust the size as needed */
+  margin-right: 5%;
+  margin-left: 10%;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.2), /* Shadow for the glow effect */
+              0 0 20px rgba(0, 0, 0, 0.1),
+              0 0 25px rgba(0, 0, 0, 0.05),
+              0 0 30px rgba(81, 203, 238, 1), /* Blue glow */
+              0 0 35px rgba(81, 203, 238, 0.8),
+              0 0 40px rgba(81, 203, 238, 0.6),
+              0 0 45px rgba(81, 203, 238, 0.4),
+              0 0 50px rgba(81, 203, 238, 0.2);
+  transition: box-shadow 0.3s ease-in-out; /* Smooth transition for the glow effect */
+  cursor: pointer;
+}
+
+
+.image1-container img {
+  width: 100%; /* Make the image fill the container */
+  height: auto; /* Maintain aspect ratio */
+  display: block; /* Remove any extra space below the image */
+}
+
+.text-heading{
+  color: #000000;
+  font-size: 1.9rem;
+  font-family: 'Consolas', 'Courier New', monospace;
+  padding-right: 10%;
+  padding-bottom: 2%;
+  font-weight: bold;
+}
+
+.text {
+  font-family: 'YourParagraphFont', sans-serif; /* Replace with the actual font name */
+  font-size: 1.1rem; /* Adjust size as needed */
+  color: #333; /* Adjust color as needed */
+  padding-right: 10%;
+  line-height: 1.8;
+  /* Other styles */
+}
+
+/* ================================================== */
+/* ================================================= */
 
 /* This part styles the scrollbar track */
 ::-webkit-scrollbar {
