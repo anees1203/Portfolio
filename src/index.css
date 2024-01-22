@@ -414,3 +414,21 @@ nav .list-styled li a:hover {
 ::-webkit-scrollbar-thumb:hover {
   background: #000000;
 }
+
+
+/* ================================================ */
+/* Contact section */
+/* ================================================ */
+
+.contact-section{
+  min-height: 5vh; /* Ensures the section takes at least the height of the viewport */
+  background-color: #000000; /* Light grey background */
+  color: #757575; /* Dark text color for contrast */
+  display: flex; /* Enables flexbox layout */
+  flex-direction: column; /* Stacks child elements vertically */
+  justify-content: flex-start; /* Aligns children to the start of the main axis */
+  align-items: center; /* Centers children on the cross axis */
+  padding-top: 20px; /* Adds some padding around the content */
+  text-align: center; /* Centers the text for all children, including the heading */
+  font-size: 1rem;
+}

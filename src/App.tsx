@@ -2,6 +2,7 @@ import Nav from './components/Nav';
 import HomeSection from './components/HomeSection';
 import WorkSection from './components/WorkSection';
 import SkillSection from './components/SkillsSection';
+import ContactSection from './components/ContactSection';
 
 function App() {
 
@@ -11,6 +12,7 @@ function App() {
       <HomeSection/>
       <SkillSection/>
       <WorkSection/>
+      <ContactSection/>
     </div>
   );
 }
