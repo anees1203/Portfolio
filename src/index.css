@@ -300,14 +300,16 @@ nav .list-styled li a:hover {
 }
 
 .image-container {
-  max-width: 40%; /* Adjust the size as needed */
+  max-width: 50%; /* Adjust the size as needed */
 }
 
 .developer-tagline {
   color: #e0dbdb; /* Replace #HEXCOLOR with the hex code of the color you want */
-  padding-top: 8%;
-  padding-right: 50%;
+  padding-top: 2%;
   font-size: 1.1rem;
+  line-height: 1.8;
+  text-align: left;
+  padding-right: 20%;
   /* Add other styles as needed, such as font-size, font-weight, etc. */
 }
 
@@ -388,6 +390,7 @@ nav .list-styled li a:hover {
   color: #333; /* Adjust color as needed */
   padding-right: 10%;
   line-height: 1.8;
+  text-align: left;
   /* Other styles */
 }
 

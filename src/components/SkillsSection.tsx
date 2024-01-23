@@ -42,7 +42,7 @@ function SkillSection() {
         {/* Image Section */}
         <div className="image-container">
           <img src={YourImage} alt="Your Image" />
-          <p className="developer-tagline">Engineer by day, Creator by night; Turning coffee into code.</p>
+          <p className="developer-tagline">I'm a programmer who crafts solutions by tapping away at the keyboard. But I'm not just stopping there. I'm a dedicated code enthusiast, always learning and evolving. Right now, I'm diving deep into Java, driven by my hunger for knowledge and my goal to truly master this craft.</p>
         </div>
 
         {/* Icons Section */}
