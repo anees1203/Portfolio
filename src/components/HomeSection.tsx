@@ -17,7 +17,10 @@ function HomeSection() {
         <InteractiveSphere color="#00fffc" numberOfNodes={800} />
       </div>
       <div className="content-wrapper">
-        <img src={my} alt="Profile" className="profile-im" />
+        <div className="profile-container">
+          <img src={my} alt="Profile" className="profile-im" />
+        </div>
+        {/* <img src={my} alt="Profile" className="profile-im" /> */}
         <div className="text-and-icons-container">
           <div className="text-wrapper">
             <pre>

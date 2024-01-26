@@ -121,14 +121,6 @@ nav .list-styled li a:hover {
   align-items: flex-start; /* Align items to the start of the container */
 }
 
-.content-wrapper {
-  display: flex;
-  flex-direction: row; /* Align children horizontally */
-  justify-content: center; /* Center the children horizontally */
-  align-items: center; /* Center the children vertically */
-  width: 100%;
-  max-width: 1200px; /* Or whatever maximum width you prefer */
-}
 
 .profile-image {
   position: absolute; /* Absolute positioning */
@@ -140,14 +132,47 @@ nav .list-styled li a:hover {
   border-radius: 50%;
 }
 
+.content-wrapper {
+  display: flex;
+  flex-direction: row; 
+  justify-content: center; 
+  align-items: center; 
+  width: 100%;
+}
+
+.profile-container {
+  align-self: center; 
+  max-width: 50%;
+  padding-left: 11%;
+  padding-bottom: 2.5%;
+
+}
+
+.text-and-icons-container {
+  display: flex;
+  flex-direction: column; /* Stack children vertically */
+  align-items: start; /* Center children horizontally */
+  justify-content: center; /* Center children vertically */
+  width: 100%;
+  padding-left: 13.5%;
+  margin-top: 80px;
+}
+
+/* Style for the individual social icons */
+.social-icon {
+  width: 40px; /* Adjust the size as needed */
+  height: 40px; /* Adjust the size as needed */
+  padding-left: 50%;
+  transition: transform 0.3s ease; /* Smooth transform effect on hover */
+  cursor: pointer !important;
+}
+
 .profile-im {
   position: absolute;
   width: 150px; /* Set a fixed width */
   height: 150px; /* Set a fixed height to maintain aspect ratio */
   border-radius: 50%;
   object-fit: cover;
-  margin-top: 8%;
-  margin-right: 50%; /* Adjust this value to add more space between image and text */
   border: 3px solid white;
   box-shadow: 0 0 10px 5px #00fffc;
 }
@@ -220,26 +245,11 @@ nav .list-styled li a:hover {
   margin-right: 25%;
 }
 
-/* Style for the individual social icons */
-.social-icon {
-  width: 40px; /* Adjust the size as needed */
-  height: 40px; /* Adjust the size as needed */
-  transition: transform 0.3s ease; /* Smooth transform effect on hover */
-  cursor: pointer !important;
-}
 
 .social-icon:hover {
   transform: scale(1.5) !important; /* Slightly enlarge icons on hover */
 }
 
-.text-and-icons-container {
-  display: flex;
-  flex-direction: column; /* Stack children vertically */
-  align-items: center; /* Center children horizontally */
-  justify-content: center; /* Center children vertically */
-  width: 100%;
-  margin-top: 80px;
-}
 
 /* ================================================ */
 /* skill section */
