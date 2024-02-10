@@ -1,7 +1,7 @@
 import { useRef, useEffect } from 'react';
 import * as THREE from 'three';
 
-const InteractiveSphere = ({ color = '#00fffc', numberOfNodes = 100 }) => {
+const InteractiveSphere = ({ color = 'black', numberOfNodes = 100 }) => {
   const mountRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
@@ -31,7 +31,7 @@ const InteractiveSphere = ({ color = '#00fffc', numberOfNodes = 100 }) => {
 
     // Create nodes
     const nodesGeometry = new THREE.BufferGeometry();
-    const nodesMaterial = new THREE.PointsMaterial({ color: color, size: 0.03 });
+    const nodesMaterial = new THREE.PointsMaterial({ color: color, size: 0.04 });
     const vertices = new Float32Array(nodePositions.flat());
     nodesGeometry.setAttribute('position', new THREE.BufferAttribute(vertices, 3));
     const nodes = new THREE.Points(nodesGeometry, nodesMaterial);
@@ -47,22 +47,10 @@ const InteractiveSphere = ({ color = '#00fffc', numberOfNodes = 100 }) => {
     };
     animate();
 
-    // Handle mouse movement
-    const handleMouseMove = (event: MouseEvent) => {
-      const rect = renderer.domElement.getBoundingClientRect();
-      const x = event.clientX - rect.left;
-      const y = event.clientY - rect.top;
-      const xRotation = (y / height - 0.5) * 2;
-      const yRotation = (x / width - 0.5) * 2;
-      nodes.rotation.x = xRotation;
-      nodes.rotation.y = yRotation;
-    };
-
     return () => {
       if (mount) {
         mount.removeChild(renderer.domElement);
       }
-      renderer.domElement.removeEventListener('mousemove', handleMouseMove);
     };
   }, [color, numberOfNodes]);
 

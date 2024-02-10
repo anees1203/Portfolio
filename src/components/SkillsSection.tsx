@@ -2,30 +2,41 @@ import python from "../assets/Images/python.png";
 import java from "../assets/Images/java.png";
 import react from "../assets/Images/react.png";
 import typescript from "../assets/Images/typescript.png";
-import javascript from "../assets/Images/javascript.png";
-import bootstrap from "../assets/Images/bootstrap.png";
-import css from "../assets/Images/css-3.png";
+import kubernetes from "../assets/Images/kubernetes.png";
+import PHP from "../assets/Images/PHP.png";
+import AWS from "../assets/Images/aws.png";
 import cplus from "../assets/Images/c-.png";
-import HTML from "../assets/Images/HTML.png";
 import github from "../assets/Images/github.png";
 import SQL from "../assets/Images/database-storage.png";
 import circleci from "../assets/Images/circleci.png";
+import angular from "../assets/Images/angular.png"; 
+import springboot from "../assets/Images/springboot.png";
+import docker from "../assets/Images/docker.png";
+import shaper3d from "../assets/Images/shaper3d.jpeg";
+import net from "../assets/Images/net.png";
 
+import wind from "../assets/Images/window.png";
 import YourImage from "../assets/Images/computer.png"; // Replace 'your-image.jpg' with your image file path
-
 function SkillSection() {
   const icons = [
-    { src: python, label: 'Python' },
-    { src: java, label: 'Java' },
+    { src: react, label: 'React.js' },
+    { src: typescript, label: 'TypeScript' },
+    { src: angular, label: 'Angular' },
+    { src: springboot, label: 'SpringBoot' },
+
     { src: cplus, label: 'c++'},
-    { src: css, label: 'css'},
-    { src: HTML, label: 'HTML'},
-    { src: react, label: 'react' },
-    { src: typescript, label: 'typescript'},
-    { src: javascript, label: 'javascript'},
-    { src: bootstrap, label: 'bootstrap'},
-    { src: github, label: 'github'},
+    { src: python, label: 'Python'},
+    { src: java, label: 'Java' },
+    { src: net, label: '.net'},
+
+    { src: PHP, label: 'PHP'},
     { src: SQL, label: 'SQL'},
+    { src: shaper3d, label: 'Shaper3D' },
+    { src: AWS, label: 'AWS'},
+
+    { src: docker, label: 'Docker'},
+    { src: kubernetes, label: 'kubernetes'},
+    { src: github, label: 'github'},
     { src: circleci, label: 'circle CI'},
 
     // Add more icons as needed
@@ -41,10 +52,12 @@ function SkillSection() {
 
         {/* Image Section */}
         <div className="image-container">
-          <img src={YourImage} alt="Your Image" />
-          <p className="developer-tagline">I'm a programmer who crafts solutions by tapping away at the keyboard. But I'm not just stopping there. I'm a dedicated code enthusiast, always learning and evolving. Right now, I'm diving deep into Java, driven by my hunger for knowledge and my goal to truly master this craft.</p>
+        <img src={wind} alt="window" className="window" />
+        <img src={YourImage} alt="Your Image" className="computer" />
+          <p className="developer-tagline">
+            As a <span className="highlighted">Master's student</span> in Computer Science at Saint Louis University, I'm on the hunt for an <span className="highlighted">internship or job</span> where I can trade my ramen for <span className="highlighted">repositories</span> and transform <span className="highlighted">classroom daydreams</span> into <span className="highlighted">real-life code</span>. Looking for a team that appreciates a <span className="highlighted">good laugh</span>, a <span className="highlighted">great algorithm</span>, and the magic of turning 'one more bug fix' into '<span className="highlighted">feature complete</span>'.
+          </p>
         </div>
-
         {/* Icons Section */}
         <div className="icons-section">
           <div className="icons-grid">

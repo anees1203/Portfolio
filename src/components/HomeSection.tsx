@@ -1,20 +1,23 @@
-import profileImage from "../assets/Images/profileImage.png";
 import InteractiveSphere from "./InteractiveSphere";
 import my from "../assets/Images/my.jpg";
-import resumeIcon from "../assets/Images/resume.png";
-import linkedInIcon from "../assets/Images/linkedin.png";
-import gitHubIcon from "../assets/Images/github.png";
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faFileAlt } from '@fortawesome/free-solid-svg-icons'; // Resume icon
+import { faLinkedin, faGithub } from '@fortawesome/free-brands-svg-icons'; // LinkedIn and GitHub icons
+import resumePdf from '../assets/Resume/Resume.pdf'; 
 
 function HomeSection() {
-  const introText = "Hi There! I'm \n";
-  const nameText = "Anees Shaik\n";
+
+  const iconColor = "#3CCF91"; // This is the color you want for your icons, adjust as needed
+
+  const introText = "Hi There!,  I'm- \n";
+  const nameText = "Anees Shaik.\n";
   const specialText =
-    "A passionate Developer 🚀 \nCrafting Digital Universes, One Line of Code at a Time.";
+    "A passionate Developer  \nTransforming Ideas into Reality with Every Commit. ";
 
   return (
     <div className="home-section">
       <div className="interactive-sphere-container">
-        <InteractiveSphere color="#00fffc" numberOfNodes={800} />
+        <InteractiveSphere color="#3CCF91" numberOfNodes={800} />
       </div>
       <div className="content-wrapper">
         <div className="profile-container">
@@ -24,19 +27,18 @@ function HomeSection() {
         <div className="text-and-icons-container">
           <div className="text-wrapper">
             <pre>
-              {introText}
+              <span className="intro-text">{introText}</span>
               <span className="name-text">{nameText}</span>
               <span className="special-text">{specialText}</span>
             </pre>
           </div>
           <div className="social-links">
             <a
-              href="YOUR_RESUME_URL"
-              target="_blank"
-              rel="noopener noreferrer"
+              href={resumePdf}
+              download="AneesShaikResume.pdf"
               title="Resume"
             >
-              <img src={resumeIcon} alt="Resume" className="social-icon" />
+              <FontAwesomeIcon icon={faFileAlt} color={iconColor} className="social-icon" />
             </a>
             <a
               href="https://www.linkedin.com/in/anees-shaik-327267210/"
@@ -44,7 +46,7 @@ function HomeSection() {
               rel="noopener noreferrer"
               title="LinkedIn"
             >
-              <img src={linkedInIcon} alt="LinkedIn" className="social-icon" />
+              <FontAwesomeIcon icon={faLinkedin} color={iconColor} className="social-icon" />
             </a>
             <a
               href="https://github.com/anees1203"
@@ -52,12 +54,11 @@ function HomeSection() {
               rel="noopener noreferrer"
               title="GitHub"
             >
-              <img src={gitHubIcon} alt="GitHub" className="social-icon" />
+              <FontAwesomeIcon icon={faGithub} color={iconColor} className="social-icon" />
             </a>
           </div>
         </div>
       </div>
-      <img src={profileImage} alt="Profile" className="profile-image" />
     </div>
   );
 }
