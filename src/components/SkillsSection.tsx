@@ -9,7 +9,7 @@ import cplus from "../assets/Images/c-.png";
 import github from "../assets/Images/github.png";
 import SQL from "../assets/Images/database-storage.png";
 import circleci from "../assets/Images/circleci.png";
-import angular from "../assets/Images/angular.png"; 
+import angular from "../assets/Images/angular.png";
 import springboot from "../assets/Images/springboot.png";
 import docker from "../assets/Images/docker.png";
 import shaper3d from "../assets/Images/shaper3d.jpeg";
@@ -19,25 +19,25 @@ import wind from "../assets/Images/window.png";
 import YourImage from "../assets/Images/computer.png"; // Replace 'your-image.jpg' with your image file path
 function SkillSection() {
   const icons = [
-    { src: react, label: 'React.js' },
-    { src: typescript, label: 'TypeScript' },
-    { src: angular, label: 'Angular' },
-    { src: springboot, label: 'SpringBoot' },
+    { src: react, label: "React.js" },
+    { src: typescript, label: "TypeScript" },
+    { src: angular, label: "Angular" },
+    { src: springboot, label: "SpringBoot" },
 
-    { src: cplus, label: 'c++'},
-    { src: python, label: 'Python'},
-    { src: java, label: 'Java' },
-    { src: net, label: '.net'},
+    { src: cplus, label: "c++" },
+    { src: python, label: "Python" },
+    { src: java, label: "Java" },
+    { src: net, label: ".net" },
 
-    { src: PHP, label: 'PHP'},
-    { src: SQL, label: 'SQL'},
-    { src: shaper3d, label: 'Shaper3D' },
-    { src: AWS, label: 'AWS'},
+    { src: PHP, label: "PHP" },
+    { src: SQL, label: "SQL" },
+    { src: shaper3d, label: "Shaper3D" },
+    { src: AWS, label: "AWS" },
 
-    { src: docker, label: 'Docker'},
-    { src: kubernetes, label: 'kubernetes'},
-    { src: github, label: 'github'},
-    { src: circleci, label: 'circle CI'},
+    { src: docker, label: "Docker" },
+    { src: kubernetes, label: "kubernetes" },
+    { src: github, label: "github" },
+    { src: circleci, label: "circle CI" },
 
     // Add more icons as needed
   ];
@@ -45,17 +45,23 @@ function SkillSection() {
   return (
     <div className="skills-section">
       {/* Centered Heading */}
-      <h1 className="skills-heading">{'< My Tech Stack >'}</h1>
-
-      {/* Parent container for Icons Section and Image Container */}
+      <h1 className="skills-heading">{"< My Tech Stack >"}</h1>
       <div className="content-container">
-
         {/* Image Section */}
         <div className="image-container">
-        <img src={wind} alt="window" className="window" />
-        <img src={YourImage} alt="Your Image" className="computer" />
+          <img src={wind} alt="window" className="window" />
+          <img src={YourImage} alt="Your Image" className="computer" />
           <p className="developer-tagline">
-            As a <span className="highlighted">Master's student</span> in Computer Science at Saint Louis University, I'm on the hunt for an <span className="highlighted">internship or job</span> where I can trade my ramen for <span className="highlighted">repositories</span> and transform <span className="highlighted">classroom daydreams</span> into <span className="highlighted">real-life code</span>. Looking for a team that appreciates a <span className="highlighted">good laugh</span>, a <span className="highlighted">great algorithm</span>, and the magic of turning 'one more bug fix' into '<span className="highlighted">feature complete</span>'.
+            As a <span className="highlighted">Master's student</span> in
+            Computer Science at Saint Louis University, I'm on the hunt for an{" "}
+            <span className="highlighted">internship or job</span> where I can
+            trade my ramen for <span className="highlighted">repositories</span>{" "}
+            and transform{" "}
+            <span className="highlighted">classroom daydreams</span> into{" "}
+            <span className="highlighted">real-life code</span>. Looking for a
+            team that appreciates a good laugh, and the magic of turning{" "}
+            <span className="highlighted">'one more bug fix'</span> into '
+            <span className="highlighted">feature complete</span>'.
           </p>
         </div>
         {/* Icons Section */}

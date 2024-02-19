@@ -1,15 +1,14 @@
 import InteractiveSphere from "./InteractiveSphere";
 import my from "../assets/Images/my.jpg";
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faFileAlt } from '@fortawesome/free-solid-svg-icons'; // Resume icon
-import { faLinkedin, faGithub } from '@fortawesome/free-brands-svg-icons'; // LinkedIn and GitHub icons
-import resumePdf from '../assets/Resume/Resume.pdf'; 
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faFileAlt } from "@fortawesome/free-solid-svg-icons";
+import { faLinkedin, faGithub } from "@fortawesome/free-brands-svg-icons";
+import resumePdf from "../assets/Resume/Resume.pdf";
 
 function HomeSection() {
+  const iconColor = "#3CCF91";
 
-  const iconColor = "#3CCF91"; // This is the color you want for your icons, adjust as needed
-
-  const introText = "Hi There!,  I'm- \n";
+  const introText = "Hi There!,  I'm \n";
   const nameText = "Anees Shaik.\n";
   const specialText =
     "A passionate Developer  \nTransforming Ideas into Reality with Every Commit. ";
@@ -33,12 +32,12 @@ function HomeSection() {
             </pre>
           </div>
           <div className="social-links">
-            <a
-              href={resumePdf}
-              download="AneesShaikResume.pdf"
-              title="Resume"
-            >
-              <FontAwesomeIcon icon={faFileAlt} color={iconColor} className="social-icon" />
+            <a href={resumePdf} download="AneesShaikResume.pdf" title="Resume">
+              <FontAwesomeIcon
+                icon={faFileAlt}
+                color={iconColor}
+                className="social-icon"
+              />
             </a>
             <a
               href="https://www.linkedin.com/in/anees-shaik-327267210/"
@@ -46,7 +45,11 @@ function HomeSection() {
               rel="noopener noreferrer"
               title="LinkedIn"
             >
-              <FontAwesomeIcon icon={faLinkedin} color={iconColor} className="social-icon" />
+              <FontAwesomeIcon
+                icon={faLinkedin}
+                color={iconColor}
+                className="social-icon"
+              />
             </a>
             <a
               href="https://github.com/anees1203"
@@ -54,7 +57,11 @@ function HomeSection() {
               rel="noopener noreferrer"
               title="GitHub"
             >
-              <FontAwesomeIcon icon={faGithub} color={iconColor} className="social-icon" />
+              <FontAwesomeIcon
+                icon={faGithub}
+                color={iconColor}
+                className="social-icon"
+              />
             </a>
           </div>
         </div>
